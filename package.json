@@ -6,3 +6,21 @@
     "@types/sqlite3": "^3.1.11"
   }
 }
+  "name": "my-project",
+  "version": "1.0.0",
+  "description": "Database Initialization Script",
+  "main": "index.js",
+  "scripts": {
+    "init-db": "node scripts/init-db.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
