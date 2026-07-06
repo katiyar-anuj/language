@@ -1,6 +1,6 @@
 -- Create the 'users' table
 CREATE TABLE users (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id TEXT PRIMARY KEY, -- Changed to TEXT for UUID
     username TEXT NOT NULL UNIQUE,
     passwordHash TEXT NOT NULL,
     createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
@@ -9,12 +9,12 @@ CREATE TABLE users (
 
 -- Create the 'todos' table
 CREATE TABLE todos (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id TEXT PRIMARY KEY, -- Changed to TEXT for UUID
     title TEXT NOT NULL,
     description TEXT,
     completed BOOLEAN DEFAULT FALSE,
     createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
     updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP,
-    userId INTEGER,
+    userId TEXT, -- Changed to TEXT for UUID foreign key
     FOREIGN KEY (userId) REFERENCES users(id) ON DELETE CASCADE
 );
