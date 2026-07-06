@@ -1,5 +1,5 @@
 -- Create the 'users' table
-CREATE TABLE users (
+CREATE TABLE IF NOT EXISTS users (
     id TEXT PRIMARY KEY, -- Changed to TEXT for UUID
     username TEXT NOT NULL UNIQUE,
     passwordHash TEXT NOT NULL,
@@ -8,7 +8,7 @@ CREATE TABLE users (
 );
 
 -- Create the 'todos' table
-CREATE TABLE todos (
+CREATE TABLE IF NOT EXISTS todos (
     id TEXT PRIMARY KEY, -- Changed to TEXT for UUID
     title TEXT NOT NULL,
     description TEXT,
