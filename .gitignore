@@ -1,0 +1,20 @@
+# 10XCODE local — never commit or push
+.10xcodeignore
+.10xcode/
+.claude/
+.forge/
+
+node_modules/
+dist/
+out/
+bin/
+bench/harbor-adapter/10xcode-agent.mjs
+bench/swebench-runner/swebench-runner.mjs
+
+*.db
+*.db-wal
+*.db-shm
+.env
+.env.local
+.DS_Store
+10xcode-settings.json
