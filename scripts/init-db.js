@@ -7,9 +7,12 @@ const SCHEMA_PATH = process.env.SCHEMA_PATH || path.resolve(__dirname, '../schem
 
 async function initializeDatabase() {
     try {
+        // Read the database schema from the specified path
         const schema = fs.readFileSync(SCHEMA_PATH, 'utf8');
+        // Open a new SQLite database connection
         const db = new sqlite3.Database(DB_PATH);
 
+        // Execute the schema to initialize the database
         await new Promise((resolve, reject) => {
             db.exec(schema, (err) => {
                 if (err) {
@@ -22,6 +25,7 @@ async function initializeDatabase() {
             });
         });
 
+        // Close the database connection
         db.close();
     } catch (error) {
         console.error('Failed to initialize database:', error.message);
