@@ -43,3 +43,8 @@ SELECT COUNT(*) FROM todos WHERE userId = 'user3-uuid';
 
 -- Negative test case: Attempt to insert a todo with a non-existent userId (should fail)
 -- INSERT INTO todos (id, title, description, userId) VALUES ('todo4-uuid', 'Orphan Todo', 'Should not be inserted', 'non-existent-user-uuid');
+SELECT * FROM users;
+SELECT * FROM todos;
+
+
+

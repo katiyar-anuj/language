@@ -3,6 +3,7 @@
 .10xcode/
 .claude/
 .forge/
+.chunks
 
 node_modules/
 dist/
